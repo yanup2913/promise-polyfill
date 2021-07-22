@@ -1,5 +1,6 @@
 # promise-polyfill
 
+https://gist.github.com/yanup2913/043debf53d4eb7f856f9759605b97f9e
 
 ```
 function PromisePolyfill(executer) {
