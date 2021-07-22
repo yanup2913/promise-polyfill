@@ -3,6 +3,7 @@
 
 
 function PromisePolyfill(executer) {
+
 	let onResolve, onReject;
 	let fulfilled = false,
 	rejected = false,
@@ -35,7 +36,7 @@ function PromisePolyfill(executer) {
 	}
 
 
-  this.then = function(callback) {
+  	this.then = function(callback) {
 		onResolve = callback;
 
 		if(fulfilled && !resolveCalled) {
@@ -59,11 +60,13 @@ function PromisePolyfill(executer) {
 }
 
 PromisePolyfill.resolve = (val) => {
+
 	new PromisePolyfill((resolve) => {resolve(val)});
 }
 
 PromisePolyfill.reject = (reason) => {
-	new PromisePolyfill((resolve, reject) => {reject(reason)});
+
+	new PromisePolyfill((resolve, reject) => {reject(reason)})
 }
 
 PromisePolyfill.all = (promises) => {
