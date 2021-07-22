@@ -1,7 +1,7 @@
 # promise-polyfill
 
 
-
+```
 function PromisePolyfill(executer) {
 
 	let onResolve, onReject;
@@ -91,6 +91,6 @@ PromisePolyfill.all = (promises) => {
 
 	return new PromisePolyfill(executer);
 }
-
+```
 
 
